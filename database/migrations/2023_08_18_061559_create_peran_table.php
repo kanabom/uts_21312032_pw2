@@ -17,8 +17,8 @@ class CreatePeranTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('film_id');
             $table->foreign('film_id')->references('id')->on('film');
-            $table->unsignedBigInteger('genre_id');
-            $table->foreign('genre_id')->references('id')->on('genre');
+            $table->unsignedBigInteger('cast_id');
+            $table->foreign('cast_id')->references('id')->on('cast');
             $table->string('nama', 45);
             $table->timestamps();
         });
