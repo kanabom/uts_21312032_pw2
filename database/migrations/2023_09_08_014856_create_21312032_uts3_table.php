@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('21312032_uts3', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->text('uts3_f1');
+            $table->text('uts3_f2');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('21312032_uts3');
     }
 };
